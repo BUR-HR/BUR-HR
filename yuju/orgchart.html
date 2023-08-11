@@ -1,53 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='../common/css/section.css'>
+    <link rel='stylesheet' href='../yuju/css/orgchart.css'>
     <title>조직도</title>
 
 </head>
 
 <body>
-    <header>
     <!-- 헤더 -->
-    <div class="header">
-        <div class='menu'>
-            <img src='../common/image/logo.png' class='logo'>
-            <span class='menu-item'>
-                <img src='../common/image/attendance.png' class='menu-image'>
-                근태
-            </span>
-            <span class='menu-item'>
-                <img src='../common/image/human.png' class='menu-image'>
-                인사
-            </span>
-            <span class='menu-item'>
-                <img src='../common/image/sitemap.png' class='menu-image'>
-                조직
-            </span>
-            <span class='menu-item'>
-                <img src='../common/image/vacation.png' class='menu-image'>
-                휴가
-            </span>
-            <span class='menu-item'>
-                <img src='../common/image/bank.png' class='menu-image'>
-                급여
-            </span>
-            <span class='menu-item'>
-                <img src='../common/image/calendar.png' class='menu-image'>
-                스케쥴
-            </span>
-            
-            <span>로그아웃</span>
+    <header>
+        <div class="header">
+            <div class='menu'>
+                <img src='../common/image/logo.png' class='logo'>
+                <span class='menu-item'>
+                    <img src='../common/image/attendance.png' class='menu-image'>
+                    근태
+                </span>
+                <span class='menu-item'>
+                    <img src='../common/image/human.png' class='menu-image'>
+                    인사
+                </span>
+                <span class='menu-item'>
+                    <img src='../common/image/sitemap.png' class='menu-image'>
+                    조직
+                </span>
+                <span class='menu-item'>
+                    <img src='../common/image/vacation.png' class='menu-image'>
+                    휴가
+                </span>
+                <span class='menu-item'>
+                    <img src='../common/image/bank.png' class='menu-image'>
+                    급여
+                </span>
+                <span class='menu-item'>
+                    <img src='../common/image/calendar.png' class='menu-image'>
+                    스케쥴
+                </span>
+
+                <span>로그아웃</span>
             </div>
         </div>
     </header>
 
+    <!-- 타이틀(조직도) -->
     <section>
-        
-    </section>
+        <div class="body">
+            <div class="title">
+                <h3>조직도</h3>
+                <hr class="line">
+            </div>
 
+            <!-- 조직도 -->
+            <!-- CEO -->
+            <div class="org-chart">
+                <div class="profile-card">
+                    <img src='../yuju/resource/image/ceo.png' alt="CEO Profile">
+                    <p>CEO</p><br>
+                </div>
+                <div class="node ceo-node">
+                </div>
+                <br>
+                <hr class="line1">
+                
+                <!-- 부서명 -->
+                <div class="level">
+                    <div class="node dept-node1">
+                        <p>영업팀</p>
+                    </div>
+                    <div class="node dept-node1">
+                        <p>마케팅팀</p>
+                    </div>
+                    <div class="node dept-node1">
+                        <p>현장팀</p>
+                    </div>
+                    <div class="node dept-node1">
+                        <p>고객응대팀</p>
+                    </div>
+                    <div class="node dept-node1">
+                        <p>인사팀</p>
+                    </div>
+                    <div class="node dept-node1">
+                        <p>총무팀</p>
+                    </div>
+                </div>
+
+                <!-- 팀장 -->
+                <div class="level">
+                    <div class="node">
+                        <div class="profile-card1">
+                            <img src='../yuju/resource/image/ceo.png' alt="CEO Profile">
+                            <p>CEO</p><br>
+                        </div>
+                    </div>
+                    
+                    <div class="node">
+                        <div class="profile-card1">
+                            <img src='../yuju/resource/image/ceo.png' alt="CEO Profile">
+                            <p>CEO</p><br>
+                        </div>
+                    </div>
+
+                    <div class="node">
+                        <div class="profile-card1">
+                            <img src='../yuju/resource/image/ceo.png' alt="CEO Profile">
+                            <p>CEO</p><br>
+                        </div>
+                    </div>
+
+                    <div class="node">
+                        <div class="profile-card1">
+                            <img src='../yuju/resource/image/ceo.png' alt="CEO Profile">
+                            <p>CEO</p><br>
+                        </div>
+                    </div>
+
+                    <div class="node">
+                        <div class="profile-card1">
+                            <img src='../yuju/resource/image/ceo.png' alt="CEO Profile">
+                            <p>CEO</p><br>
+                        </div>
+                    </div>
+
+                    <div class="node">
+                        <div class="profile-card1">
+                            <img src='../yuju/resource/image/ceo.png' alt="CEO Profile">
+                            <p>CEO</p><br>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="level">
+                    <div class="node">
+                        <p>Supervisor</p>
+                    </div>
+                    <div class="node">
+                        <p>Supervisor</p>
+                    </div>
+                    <div class="node">
+                        <p>Supervisor</p>
+                    </div>
+                    <div class="node">
+                        <p>Supervisor</p>
+                    </div>
+                    <div class="node">
+                        <p>Supervisor</p>
+                    </div>
+                </div>
+                <div class="level">
+                    <div class="node">
+                        <p>Employee</p>
+                    </div>
+                    <div class="node">
+                        <p>Employee</p>
+                    </div>
+                    <div class="node">
+                        <p>Employee</p>
+                    </div>
+                    <div class="node">
+                        <p>Employee</p>
+                    </div>
+                    <div class="node">
+                        <p>Employee</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!-- 푸터 -->
     <footer>
         <div class="footer">
             <pre>
@@ -59,7 +182,8 @@
             
             개인(위치)정보 처리방침   |    이용약관    |  위치기반 서비스 이용약관
             </pre>
-                </div>
+        </div>
     </footer>
 </body>
+
 </html>
