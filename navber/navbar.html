@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../common/css/navbar.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Your+Desired+Font&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>네비게이션바</title>
+</head>
+<body>
+
+
+<div class="nav-container">
+    <ul class="nav">
+        <a href="#" class="menu-link">
+            <span class="menu-icon"><i class="fas fa-bars"></i></span>
+            <span class="menu-text">메뉴</span>
+        </a>
+        
+            
+            <div class="menu">
+                <br>
+                <p class="btn">▪</p>
+                <p class="dropmenu-btn">메뉴1</p>
+                <p class="dropmenu">▪ 하위메뉴</p>
+                <p class="dropmenu">▪ 하위메뉴</p>
+                <p class="dropmenu">▪ 하위메뉴</p>
+            </div>
+            <br>
+
+            <div class="menu">
+                <p class="btn">▪</p>
+                <p class="dropmenu-btn">메뉴2</p>
+                <p class="dropmenu">▪ 하위메뉴</p>
+                <p class="dropmenu">▪ 하위메뉴</p>
+                <p class="dropmenu">▪ 하위메뉴</p>
+            </div>
+            <br>
+            
+            <div class="menu">
+                <p class="btn">▪</p>
+                <p class="dropmenu-btn">메뉴3</p>
+                <p class="dropmenu">▪ 하위메뉴</p>
+                <p class="dropmenu">▪ 하위메뉴</p>
+                <p class="dropmenu">▪ 하위메뉴</p>
+            </div>
+        </ul>
+    </div>
+
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const menuNav = document.querySelector('.nav');
+
+        menuIcon.addEventListener('click', () => {
+            menuNav.classList.toggle('opened'); // .opened 클래스 추가/제거
+        });
+    </script>
+
+</body>
+</html>
