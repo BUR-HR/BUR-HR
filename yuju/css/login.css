@@ -11,7 +11,7 @@ body {
 }
 
 /* 로고 */
-.logo img {
+.loginlogo img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -22,7 +22,7 @@ body {
     -webkit-user-select: none;
 }
 
-.logo {
+.loginlogo {
     position: absolute;
     top: 150px;
     left: 50%; 
