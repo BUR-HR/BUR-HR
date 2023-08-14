@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 150vh;
+    min-height: 220vh;
     background-color:  #F9F7F7;;
 }
 
@@ -51,7 +51,7 @@
     content: "";
     position: absolute;
     top: 10px;
-    left: 60%;
+    left: 80%;
     transform: translateX(-50%);
     width: 2px;
     height: 20px;
@@ -70,7 +70,7 @@
     border: 1px solid #ccc; /* 테두리 스타일 설정 */
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
-    margin-right: -11px;
+    margin-right: -21px; /* 노드간의 가로 폭 간격 */
     
 }
 
@@ -87,7 +87,9 @@
     width: 2px;
     height: 30px;
     background-color: #333;
+    
 }
+
 
 /* 프로필카드 */
 /* ceo */
@@ -142,7 +144,8 @@
 
 /* 라인1(ceo 하위 부서 잇는 선) */
 .line1 {
-    width: 88.5%;
+    width: 84.5%;
     border-top: 2px solid black;
     margin-top: 10px; /* 원하는 간격 설정 */
+
 }
