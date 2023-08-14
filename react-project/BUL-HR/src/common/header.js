@@ -15,7 +15,7 @@ export const Header = () => {
                 <Link to={"/attendance"} className="first-link">
                     <span className="menu-item">
                         <img
-                            src="/common/images/attendance.png"
+                            src="/common/images/clock.png"
                             className="menu-image"
                             alt="attendance"
                         />
