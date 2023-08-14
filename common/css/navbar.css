@@ -16,7 +16,7 @@ body{
     background: #FFF;
     box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
-    padding-top: 20px; /* 상단 패딩 추가 */
+    padding: 20px; /* 상단 패딩 추가 */
     position: fixed;
     z-index:1; 
     overflow-x: hidden;
@@ -38,10 +38,9 @@ body{
 }
 
 .nav-container span {
-    position: absolute;
     top: 0;
     left: 0;
-    padding: 15px;
+    padding-left: 15px;
     font-size: 20px;
     cursor: pointer;
 }
@@ -54,13 +53,15 @@ body{
 
 .menu {
     margin-left: 20px;
-    
+}
+
+.menu span {
+    font-size: 14px;
 }
 
 .menu-link {
     display: inline-flex;
     align-items: center; /* 세로 중앙 정렬 */
-    padding: 15px;
     cursor: pointer;
     text-decoration: none;
     color: black; /* 메뉴 텍스트 색상 설정 */
@@ -76,23 +77,22 @@ body{
 
 .menu-text {
     font-size: 10px; /* 텍스트 크기 설정 */
-    margin-left: 30px; 
-    
 }
 
 .dropmenu {
     display: none;
     width: 200px;
     background: #eee;
-    bax-shadow: 0px 10px 8px 0px
-    rgba(0,0,0,0.3);
+    box-shadow: 0px 10px 8px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
     padding: 10px;
     margin: 5px 0; 
-    
+    gap: 10px;
 }
 
-.menu:hover .dropmenu{
-    display: block;
+.dropmenu.select {
+    display: flex;
+    flex-direction: column;
 }
 
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,42 +10,49 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>네비게이션바</title>
 </head>
+
 <body>
 
 
-<div class="nav-container">
-    <ul class="nav">
-        <a href="#" class="menu-link">
-            <span class="menu-icon"><i class="fas fa-bars"></i></span>
-            <span class="menu-text">메뉴</span>
-        </a>
-        
-            
+    <div class="nav-container">
+        <ul class="nav">
+            <div class="menu-link">
+                <span class="menu-icon"><i class="fas fa-bars"></i></span>
+                <span class="menu-text">메뉴</span>
+            </div>
+
+
             <div class="menu">
                 <br>
                 <p class="btn">▪</p>
                 <p class="dropmenu-btn">메뉴1</p>
-                <p class="dropmenu">▪ 하위메뉴</p>
-                <p class="dropmenu">▪ 하위메뉴</p>
-                <p class="dropmenu">▪ 하위메뉴</p>
+                <p class="dropmenu">
+                    <span>▪ 하위메뉴</span>
+                    <span>▪ 하위메뉴</span>
+                    <span>▪ 하위메뉴</span>
+                </p>
             </div>
             <br>
 
             <div class="menu">
                 <p class="btn">▪</p>
                 <p class="dropmenu-btn">메뉴2</p>
-                <p class="dropmenu">▪ 하위메뉴</p>
-                <p class="dropmenu">▪ 하위메뉴</p>
-                <p class="dropmenu">▪ 하위메뉴</p>
+                <p class="dropmenu">
+                    <span>▪ 하위메뉴</span>
+                    <span>▪ 하위메뉴</span>
+                    <span>▪ 하위메뉴</span>
+                </p>
             </div>
             <br>
             
             <div class="menu">
                 <p class="btn">▪</p>
                 <p class="dropmenu-btn">메뉴3</p>
-                <p class="dropmenu">▪ 하위메뉴</p>
-                <p class="dropmenu">▪ 하위메뉴</p>
-                <p class="dropmenu">▪ 하위메뉴</p>
+                <p class="dropmenu">
+                    <span>▪ 하위메뉴</span>
+                    <span>▪ 하위메뉴</span>
+                    <span>▪ 하위메뉴</span>
+                </p>
             </div>
         </ul>
     </div>
@@ -53,11 +61,21 @@
     <script>
         const menuIcon = document.querySelector('.menu-icon');
         const menuNav = document.querySelector('.nav');
-
         menuIcon.addEventListener('click', () => {
             menuNav.classList.toggle('opened'); // .opened 클래스 추가/제거
         });
+
+        menuNav.addEventListener('click', (e) => {
+            let selectEle = e.target;
+
+            if (selectEle.classList.contains('dropmenu-btn')) {
+                selectEle.nextElementSibling.classList.toggle('select');
+            }
+        })
+
+
     </script>
 
 </body>
+
 </html>
