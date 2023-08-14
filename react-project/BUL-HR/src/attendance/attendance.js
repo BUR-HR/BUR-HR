@@ -9,7 +9,7 @@ export const Attendance = () => {
         <Content>
             <Navigation></Navigation>
             <div className="main">
-                <div className="title">근태관리</div>
+                <div className="attendance-title">근태관리</div>
                 <div className="current-time">2023/08/07(월) AM 09:00:21</div>
                 <div className="work-time">
                     <div className="attendance-time"></div>
