@@ -100,8 +100,6 @@
     border-radius: 10px; /* 테두리를 둥글게 처리 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
 
-    
-
 }
 
 .profile-card img {
@@ -126,8 +124,9 @@
     padding: 10px; /* 내부 여백 */
     border-radius: 10px; /* 테두리를 둥글게 처리 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
-    margin-right: -20px;
+    margin-right: -5px;
     perspective: 1000px; 
+    
 }
 
 .profile-card1 img {
@@ -180,7 +179,7 @@
 
 /* 라인1(ceo 하위 부서 잇는 선) */
 .line1 {
-    width: 89.7%;
+    width: 89.3%;
     border-top: 2px solid black;
     margin-top: 10px; /* 원하는 간격 설정 */
 
