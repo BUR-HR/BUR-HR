@@ -28,7 +28,7 @@ export const Header = () => {
                     />
                     인사
                 </NavLink>
-                <NavLink to='organic' className="menu-item">
+                <NavLink to='orgchart' className="menu-item">
                     <img
                         src="/common/images/sitemap.png"
                         className="menu-image"
