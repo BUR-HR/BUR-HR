@@ -1,9 +1,15 @@
 import "./App.css";
-import Header from "./common/header";
 import Footer from "./common/footer";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Login } from "./login/login";
-import Attendance from "./attendance/attendance";
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes,
+    Navigate,
+} from "react-router-dom";
+import { Login } from "./pages/login";
+import Attendance from "./pages/attendance";
+import PageNotFound from "./error/PageNotFound";
+import Layout from "./layout/layout";
 
 function App() {
     return (
@@ -11,10 +17,11 @@ function App() {
             <div className="container">
                 <Routes>
                     <Route path="/login" element={<Login />} />
-                    <Route path="/*" element={<Header />} />
-                </Routes>
-                <Routes>
-                    <Route path="/attendance" element={<Attendance />} />
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Navigate to="/attendance" />} />
+                        <Route path="attendance" element={<Attendance />} />
+                    </Route>
+                    <Route path="*" element={<PageNotFound />} />
                 </Routes>
                 <Footer />
             </div>

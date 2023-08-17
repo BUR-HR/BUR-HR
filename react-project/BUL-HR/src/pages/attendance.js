@@ -1,21 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/attendance.css";
 import "../css/nav.css";
 import Navigation from "../common/navigation";
 import Content from "../common/content";
+import Chart from '../common/chart';
 
 export const Attendance = () => {
+    const [isSelect, setIsSelect] = useState(false);
+
+    const onClickHandler = (e) => {
+        setIsSelect(!isSelect);
+    }
+
     return (
         <Content>
-            <Navigation></Navigation>
+            <Navigation>
+                <div className="submenulist">
+                    <div className={`submenu ${isSelect ? 'select' : ''}`} onClick={onClickHandler}>
+                        <span>근태관리</span>
+                        <img
+                            src="/common/images/plus.svg"
+                            alt=""
+                            className="submenu-plus-icon menu-icon"
+                        />
+                        <img src="/common/images/minus.svg" alt="" className="submenu-minus-icon menu-icon"/>
+                    </div>
+                    <div className="dropmenu">
+                        <ul>
+                            <li>하위 메뉴</li>
+                            <li>하위 메뉴</li>
+                            <li>하위 메뉴</li>
+                        </ul>
+                    </div>
+                </div>
+            </Navigation>
             <div className="main">
                 <div className="attendance-title">근태관리</div>
                 <div className="current-time">2023/08/07(월) AM 09:00:21</div>
                 <div className="work-time">
-                    <div className="attendance-time"></div>
-                    <div className="total-attendance-time"></div>
+                    <div className="attendance-time page-config"></div>
+                    <div className="total-attendance-time page-config">
+                        이번 주 근무
+                        <Chart/>
+                    </div>
                 </div>
-                <div className="attendance-info">
+                <div className="attendance-info page-config">
                     <div className="work-history">
                         근무 내역 <br />
                         <span

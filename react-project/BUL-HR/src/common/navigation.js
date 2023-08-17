@@ -10,8 +10,8 @@ const Navigation = ({ children }) => {
                     className="menu-icon"
                 />
                 <span>메뉴</span>
-                {children}
             </div>
+            {children}
         </div>
     );
 };

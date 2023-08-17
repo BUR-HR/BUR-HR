@@ -1,80 +1,68 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../css/section.css";
 
 export const Header = () => {
     return (
         <div className="header">
             <div className="menu">
-                <Link to={"/"}>
+                <NavLink to={"/attendance"}>
                     <img
                         src="/common/images/logo.png"
                         className="logo"
                         alt="logo"
                     />
-                </Link>
-                <Link to={"/attendance"} className="first-link">
-                    <span className="menu-item">
-                        <img
-                            src="/common/images/clock.png"
-                            className="menu-image"
-                            alt="attendance"
-                        />
-                        근태
-                    </span>
-                </Link>
-                <Link>
-                    <span className="menu-item">
-                        <img
-                            src="/common/images/human.png"
-                            className="menu-image"
-                            alt="human"
-                        />
-                        인사
-                    </span>
-                </Link>
-                <Link>
-                    <span className="menu-item">
-                        <img
-                            src="/common/images/sitemap.png"
-                            className="menu-image"
-                            alt="oranization"
-                        />
-                        조직
-                    </span>
-                </Link>
-                <Link>
-                    <span className="menu-item">
-                        <img
-                            src="/common/images/vacation.png"
-                            className="menu-image"
-                            alt="vacation"
-                        />
-                        휴가
-                    </span>
-                </Link>
-                <Link>
-                    <span className="menu-item">
-                        <img
-                            src="/common/images/bank.png"
-                            className="menu-image"
-                            alt="salary"
-                        />
-                        급여
-                    </span>
-                </Link>
-                <Link>
-                    <span className="menu-item">
-                        <img
-                            src="/common/images/calendar.png"
-                            className="menu-image"
-                            alt="calendar"
-                        />
-                        스케쥴
-                    </span>
-                </Link>
-                <Link className="last-link">
+                </NavLink>
+                <NavLink to={"/attendance"} className={({isActive}) => isActive ? "menu-item active" : "menu-item"}>
+                    <img
+                        src="/common/images/clock.png"
+                        className="menu-image"
+                        alt="attendance"
+                    />
+                    근태
+                </NavLink>
+                <NavLink to='/human' className="menu-item">
+                    <img
+                        src="/common/images/human.png"
+                        className="menu-image"
+                        alt="human"
+                    />
+                    인사
+                </NavLink>
+                <NavLink to='organic' className="menu-item">
+                    <img
+                        src="/common/images/sitemap.png"
+                        className="menu-image"
+                        alt="oranization"
+                    />
+                    조직
+                </NavLink>
+                <NavLink to='rest' className="menu-item">
+                    <img
+                        src="/common/images/vacation.png"
+                        className="menu-image"
+                        alt="vacation"
+                    />
+                    휴가
+                </NavLink>
+                <NavLink to='payment' className="menu-item">
+                    <img
+                        src="/common/images/bank.png"
+                        className="menu-image"
+                        alt="salary"
+                    />
+                    급여
+                </NavLink>
+                <NavLink to='schedule' className="menu-item">
+                    <img
+                        src="/common/images/calendar.png"
+                        className="menu-image"
+                        alt="calendar"
+                    />
+                    스케쥴
+                </NavLink>
+                <NavLink to='login'>
                     <span>로그아웃</span>
-                </Link>
+                </NavLink>
             </div>
         </div>
     );
