@@ -60,7 +60,7 @@ export const Header = () => {
                     />
                     스케쥴
                 </NavLink>
-                <NavLink to='login'>
+                <NavLink to='login' className={'logout'}>
                     <span>로그아웃</span>
                 </NavLink>
             </div>

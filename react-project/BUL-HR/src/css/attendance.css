@@ -7,12 +7,7 @@
     min-height: 720px;
 }
 
-.attendance-title {
-    width: 100%;
-    padding-bottom: 15px;
-    border-bottom: 1px solid black;
-    font-size: 24px;
-}
+
 
 .current-time {
     display: inline-flex;
@@ -46,6 +41,8 @@
 .attendance-time {
     width: 50%;
     height: 180px;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
 .total-attendance-time {

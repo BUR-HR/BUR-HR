@@ -35,12 +35,16 @@ export const Attendance = () => {
                 </div>
             </Navigation>
             <div className="main">
-                <div className="attendance-title">근태관리</div>
+                <div className="page-title">근태관리</div>
                 <div className="current-time">2023/08/07(월) AM 09:00:21</div>
                 <div className="work-time">
-                    <div className="attendance-time page-config"></div>
+                    <div className="attendance-time page-config">
+                        <h3>오늘 근무한 시간</h3>
+                        <h2>{new Date().toLocaleTimeString()}</h2>
+                        <button>출근</button><button>퇴근</button>
+                    </div>
                     <div className="total-attendance-time page-config">
-                        이번 주 근무
+                        <h3>이번 주 근무</h3>
                         <Chart/>
                     </div>
                 </div>
