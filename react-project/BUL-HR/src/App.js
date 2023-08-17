@@ -4,7 +4,7 @@ import Footer from "./common/footer";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Login } from "./login/login";
 import Attendance from "./attendance/attendance";
-
+import { Orgchart } from './orgchart/orgchart'
 function App() {
     return (
         <Router>
@@ -14,7 +14,7 @@ function App() {
                     <Route path="/*" element={<Header />} />
                 </Routes>
                 <Routes>
-                    <Route path="/attendance" element={<Attendance />} />
+                    <Route path="/orgchart" element={<Orgchart />}/>
                 </Routes>
                 <Footer />
             </div>
