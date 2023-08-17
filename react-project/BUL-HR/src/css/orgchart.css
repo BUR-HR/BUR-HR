@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 220vh;
+    min-height: 280vh;
     background-color:  #F9F7F7;;
 }
 
@@ -274,8 +274,73 @@
     transform: rotateY(180deg); /* 카드를 뒤집어서 보이도록 설정 */
 }
 
+/* 사원 */
+
+.team-employee-container {
+    display: flex;
+    gap: 100px; /* 팀장 프로필 카드 간격을 조절합니다 */
+    margin-left: 70px;
+}
+.profile-card3 {
+    text-align: center;
+    border: 2px solid #ccc; /* 테두리 스타일 설정 */
+    padding: 10px; /* 내부 여백 */
+    border-radius: 10px; /* 테두리를 둥글게 처리 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+    perspective: 1000px; /* 여기에 한 번만 설정하면 됨 */
+    margin-left: 10px;
+    margin-top: 30px;
+    transform-style: preserve-3d; /* 3D 변환 유지 */
+    transition: transform 0.5s; /* 트랜지션 설정 */
+}
+
+.team-employee-container {
+    display: flex;
+    gap: 100px; /* 팀장 프로필 카드 간격을 조절합니다 */
+    margin-left: 70px;
+}
+
+.profile-card3 img {
+    width: 100px; /* 이미지 크기 조절 */
+    height: 100px;
+    object-fit: cover; /* 이미지 비율 유지하며 네모난 상자 안에 꽉 차게 */
+    border-radius: 0%;
+    margin-bottom: 10px;
+}
+
+.profile-card3 .back p {
+    display: flex; /* 가로 정렬을 위해 flex 추가 */
+    align-items: center; /* 세로 가운데 정렬 */
+    margin: 5px 0; /* 간격 설정 */
+    font-size: 10px;
+    transform: rotateY(180deg);
+}
 
 
+.profile-card3 .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 88%;
+    transform: rotateY(0deg);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(182, 182, 182, 0.902);
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card3.flipped .back {
+    transform: rotateY(0deg);
+}
+
+.flipped {
+    transform: rotateY(180deg); /* 카드를 뒤집어서 보이도록 설정 */
+}
 
 
 
