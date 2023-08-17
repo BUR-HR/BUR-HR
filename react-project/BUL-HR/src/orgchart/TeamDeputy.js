@@ -34,6 +34,7 @@ const TeamDeputy = ({ teamDeputy }) => {
             <p><span style={{ fontWeight: 'bold' }}>입사날짜</span> : {deputy.entryDate}</p>
         </div>
     );
+    
 
     return (
         <div className="team-deputy-container">
