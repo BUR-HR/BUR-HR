@@ -7,6 +7,7 @@ import {
     Navigate,
 } from "react-router-dom";
 import { Login } from "./pages/login";
+import { Orgchart } from './orgchart/orgchart'
 import Attendance from "./pages/attendance";
 import PageNotFound from "./error/PageNotFound";
 import Layout from "./layout/layout";
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Navigate to="/attendance" />} />
                         <Route path="attendance" element={<Attendance />} />
+                        <Route path="/orgchart" element={<Orgchart />}/>
                     </Route>
                     <Route path="*" element={<PageNotFound />} />
                 </Routes>
