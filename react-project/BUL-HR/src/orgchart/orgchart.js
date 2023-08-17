@@ -1,13 +1,13 @@
 import React, { useState } from "react";
+import TeamLeaders from "./TeamLeaders";
+import TeamDeputy from "./TeamDeputy";
 import '../css/orgchart.css'
 
 export const Orgchart = () => {
+    const [flippedCards, setFlippedCards] = useState([]); // flippedCards 변수 정의
 
-     // 프로필 카드 뒤집기를 위한 상태 관리
-    const [flippedCards, setFlippedCards] = useState([]);
-
-    // 프로필 카드 뒤집기 함수
-const flipCard = (index) => {
+    // flipCard 함수 정의
+    const flipCard = (index) => {
         setFlippedCards((prevFlippedCards) => {
             if (prevFlippedCards.includes(index)) {
                 return prevFlippedCards.filter(cardIndex => cardIndex !== index);
@@ -67,69 +67,6 @@ const flipCard = (index) => {
         );
     };
 
-    const teamLeaders = [
-        {
-            name: "이수혁",
-            department: "영업팀",
-            position: "팀장",
-            hp: "010-1234-5678",
-            email: "sample@bubble.com",
-            entryDate: "2017/05/13",
-            imageSrc: "/common/images/1.png"
-        },
-        
-        {
-            name: "박선애",
-            department: "영업팀",
-            position: "팀장",
-            hp: "010-1234-5678",
-            email: "sample@bubble.com",
-            entryDate: "2017/05/13",
-            imageSrc: "/common/images/2.png"
-        },
-
-        {
-            name: "조세라",
-            department: "영업팀",
-            position: "팀장",
-            hp: "010-1234-5678",
-            email: "sample@bubble.com",
-            entryDate: "2017/05/13",
-            imageSrc: "/common/images/4.png"
-        },
-
-        {
-            name: "이제훈",
-            department: "영업팀",
-            position: "팀장",
-            hp: "010-1234-5678",
-            email: "sample@bubble.com",
-            entryDate: "2017/05/13",
-            imageSrc: "/common/images/5.png"
-        },
-
-        {
-            name: "황재승",
-            department: "영업팀",
-            position: "팀장",
-            hp: "010-1234-5678",
-            email: "sample@bubble.com",
-            entryDate: "2017/05/13",
-            imageSrc: "/common/images/7.png"
-        },
-
-        {
-            name: "이현민",
-            department: "영업팀",
-            position: "팀장",
-            hp: "010-1234-5678",
-            email: "sample@bubble.com",
-            entryDate: "2017/05/13",
-            imageSrc: "/common/images/8.png"
-        },
-    ];
-    
-
     // 부서명 
     const DepartmentNodes = () => {
         const departments = [
@@ -151,6 +88,129 @@ const flipCard = (index) => {
             </div>
         );
     };
+
+    // 팀장 정보
+    const teamLeaders = [
+        {
+            name: "이수혁",
+            department: "영업팀",
+            position: "팀장",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/1.png"
+        },
+        
+        {
+            name: "박선애",
+            department: "마케팅팀",
+            position: "팀장",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/2.png"
+        },
+
+        {
+            name: "조세라",
+            department: "현장팀",
+            position: "팀장",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/4.png"
+        },
+
+        {
+            name: "이제훈",
+            department: "고객응대팀",
+            position: "팀장",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/5.png"
+        },
+
+        {
+            name: "황재승",
+            department: "인사팀",
+            position: "팀장",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/7.png"
+        },
+
+        {
+            name: "이현민",
+            department: "총무팀",
+            position: "팀장",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/8.png"
+        },
+    ];
+
+    // 대리 정보
+    const teamDeputy = [
+        {
+            name: "이지영",
+            department: "영업팀",
+            position: "대리",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/2.png"
+        },
+        {
+            name: "최현우",
+            department: "마케팅팀",
+            position: "대리",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/5.png"
+        },
+        {
+            name: "임지환",
+            department: "현장팀",
+            position: "대리",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/8.png"
+        },
+        {
+            name: "우재효",
+            department: "고객응대팀",
+            position: "대리",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/1.png"
+        },
+        {
+            name: "송유라",
+            department: "인사팀",
+            position: "대리",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/3.png"
+        },
+        {
+            name: "오현주",
+            department: "총무팀",
+            position: "대리",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/6.png"
+        }
+    ];
+
+    // 사원 정보
     
     return (
         <div className="body">
@@ -170,19 +230,10 @@ const flipCard = (index) => {
                 </div>  
 
                 {/* 팀장 프로필 카드 */}
-                <div className="team-leaders-container">
-                    {teamLeaders.map((leader, index) => (
-                        <div className={`node dept-node2 ${flippedCards.includes(index) ? "flipped" : ""}`} key={index}>
-                            <div className="profile-card1" onClick={() => flipCard(index)}>
-                                <div className="card-inner">
-                                    {renderFront(`팀장 ${leader.name}`, leader.imageSrc, index)}
-                                    {flippedCards.includes(index) && renderBack(leader)}
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
+                <TeamLeaders teamLeaders={teamLeaders} />
+                
+                {/* 대리 프로필 카드 */}
+                <TeamDeputy teamDeputy={teamDeputy} flipCard={flipCard} flippedCards={flippedCards} />
             </section>
         </div>
     );
