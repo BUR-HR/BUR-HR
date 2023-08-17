@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TeamLeaders from "./TeamLeaders";
 import TeamDeputy from "./TeamDeputy";
+import TeamEmployee from "./TeamEmployee";
 import '../css/orgchart.css'
 
 export const Orgchart = () => {
@@ -211,7 +212,63 @@ export const Orgchart = () => {
     ];
 
     // 사원 정보
-    
+    const teamEmployee = [
+        {
+            name: "김수지",
+            department: "영업팀",
+            position: "사원",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/3.png"
+        },
+        {
+            name: "정한나",
+            department: "마케팅팀",
+            position: "사원",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/6.png"
+        },
+        {
+            name: "서지원",
+            department: "현장팀",
+            position: "사원",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/9.png"
+        },
+        {
+            name: "홍예지",
+            department: "고객응대팀",
+            position: "사원",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/10.png"
+        },
+        {
+            name: "장현식",
+            department: "인사팀",
+            position: "사원",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/7.png"
+        },
+        {
+            name: "김세훈",
+            department: "총무팀",
+            position: "사원",
+            hp: "010-1234-5678",
+            email: "sample@bubble.com",
+            entryDate: "2017/05/13",
+            imageSrc: "/common/images/1.png"
+        }
+    ];
+
     return (
         <div className="body">
             <section>
@@ -234,6 +291,9 @@ export const Orgchart = () => {
                 
                 {/* 대리 프로필 카드 */}
                 <TeamDeputy teamDeputy={teamDeputy} flipCard={flipCard} flippedCards={flippedCards} />
+
+                {/* 사원 프로필 카드  */}
+                <TeamEmployee teamEmployee={teamEmployee} flipCard={flipCard} flippedCards={flippedCards}/>
             </section>
         </div>
     );
