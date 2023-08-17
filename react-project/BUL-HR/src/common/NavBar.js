@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navigation = ({ children }) => {
+const NavBar = ({ children }) => {
     return (
         <div className="nav">
             <div className="menu-title">
@@ -16,4 +16,4 @@ const Navigation = ({ children }) => {
     );
 };
 
-export default Navigation;
+export default NavBar;

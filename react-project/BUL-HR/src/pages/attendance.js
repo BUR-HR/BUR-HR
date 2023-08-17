@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import Chart from '../common/chart';
+import Content from "../common/content";
 import "../css/attendance.css";
 import "../css/nav.css";
-import Navigation from "../common/navigation";
-import Content from "../common/content";
-import Chart from '../common/chart';
+import NavBar from '../common/NavBar';
 
 export const Attendance = () => {
     const [isSelect, setIsSelect] = useState(false);
@@ -14,7 +14,7 @@ export const Attendance = () => {
 
     return (
         <Content>
-            <Navigation>
+            <NavBar>
                 <div className="submenulist">
                     <div className={`submenu ${isSelect ? 'select' : ''}`} onClick={onClickHandler}>
                         <span>근태관리</span>
@@ -33,7 +33,7 @@ export const Attendance = () => {
                         </ul>
                     </div>
                 </div>
-            </Navigation>
+            </NavBar>
             <div className="main">
                 <div className="page-title">근태관리</div>
                 <div className="current-time">2023/08/07(월) AM 09:00:21</div>
@@ -41,7 +41,9 @@ export const Attendance = () => {
                     <div className="attendance-time page-config">
                         <h3>오늘 근무한 시간</h3>
                         <h2>{new Date().toLocaleTimeString()}</h2>
-                        <button>출근</button><button>퇴근</button>
+                        <div>
+                            <button>출근</button><button>퇴근</button>
+                        </div>
                     </div>
                     <div className="total-attendance-time page-config">
                         <h3>이번 주 근무</h3>
