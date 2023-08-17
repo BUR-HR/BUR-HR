@@ -38,8 +38,8 @@ const TeamDeputy = ({ teamDeputy }) => {
     return (
         <div className="team-deputy-container">
             {teamDeputy.map((deputy, index) => (
-                <div className={`node dept-node2 ${flippedCards.includes(index) ? "flipped" : ""}`} key={index}>
-                    <div className="profile-card2" onClick={() => flipCard(index)}>
+                <div className={`node dept-node2`} key={index}>
+                <div className={`profile-card2 ${flippedCards.includes(index) ? "flipped" : ""}`} onClick={() => flipCard(index)}>
                         <div className="card-inner">
                             {renderFront(deputy.position, deputy.name, deputy.imageSrc, index)}
                             {flippedCards.includes(index) && renderBack(deputy)}
@@ -50,6 +50,5 @@ const TeamDeputy = ({ teamDeputy }) => {
         </div>
     );
 };
-
 
 export default TeamDeputy;

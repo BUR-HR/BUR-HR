@@ -99,6 +99,7 @@
     padding: 10px; /* 내부 여백 */
     border-radius: 10px; /* 테두리를 둥글게 처리 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+    
 
 }
 
@@ -118,16 +119,6 @@
 }
 
 /* 팀장 */
-.profile-card1 {
-    text-align: center;
-    border: 2px solid #ccc; /* 테두리 스타일 설정 */
-    padding: 10px; /* 내부 여백 */
-    border-radius: 10px; /* 테두리를 둥글게 처리 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
-    margin-right: -5px;
-    perspective: 1000px; 
-    
-}
 
 .profile-card1 img {
     width: 100px; /* 이미지 크기 조절 */
@@ -135,6 +126,7 @@
     object-fit: cover; /* 이미지 비율 유지하며 네모난 상자 안에 꽉 차게 */
     border-radius: 0%;
     margin-bottom: 10px;
+    
 }
 
 .profile-card1 .back p {
@@ -149,6 +141,7 @@
     perspective: 1000px;
     transform-style: preserve-3d; /* 3D 변환 유지 */
     transition: transform 0.5s; /* 트랜지션 설정 */
+    
 }
 
 .profile-card1 .back {
@@ -171,11 +164,14 @@
 
 .profile-card1.flipped .back {
     transform: rotateY(0deg);
+    
 }
 
 .flipped {
     transform: rotateY(180deg); /* 카드를 뒤집어서 보이도록 설정 */
+    
 }
+
 
 /* 라인1(ceo 하위 부서 잇는 선) */
 .line1 {

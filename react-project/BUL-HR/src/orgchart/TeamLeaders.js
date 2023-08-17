@@ -41,8 +41,8 @@ const TeamLeaders = ({ teamLeaders }) => {
     return (
         <div className="team-leaders-container">
             {teamLeaders.map((leader, index) => (
-                <div className={`node dept-node2 ${flippedCards.includes(index) ? "flipped" : ""}`} key={index}>
-                    <div className="profile-card1" onClick={() => flipCard(index)}>
+                <div className={`node dept-node2`} key={index}>
+                    <div className={`profile-card1 ${flippedCards.includes(index) ? "flipped" : ""}`} onClick={() => flipCard(index)}>
                         <div className="card-inner">
                             {renderFront(leader.position, leader.name, leader.imageSrc, index)}
                             {flippedCards.includes(index) && renderBack(leader)}

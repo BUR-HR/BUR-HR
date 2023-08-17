@@ -138,6 +138,9 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
     perspective: 1000px; /* 여기에 한 번만 설정하면 됨 */
     margin-left: 10px;
+
+    transform-style: preserve-3d; /* 3D 변환 유지 */
+    transition: transform 0.5s; /* 트랜지션 설정 */
 }
 
 .team-leaders-container {
