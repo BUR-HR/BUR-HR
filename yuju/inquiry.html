@@ -1,0 +1,122 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='../common/css/section.css'>
+        <link rel='stylesheet' href='../yuju/css/inquiry.css'>
+        <!-- 리액트로 옮길때 import SearchIcon from "@material-ui/icons/Search";쓰기 (https://velog.io/@yonyas/css검색창-클릭시-아이콘-포함-테두리-생기기) -->
+        <title>직원조회</title>
+
+    </head>
+
+    <body>
+        <!-- 헤더 -->
+        <header>
+            <div class="header">
+                <div class='menu'>
+                    <img src='../common/image/logo.png' class='logo'>
+                    <span class='menu-item'>
+                        <img src='../common/image/attendance.png' class='menu-image'>
+                        근태
+                    </span>
+                    <span class='menu-item'>
+                        <img src='../common/image/human.png' class='menu-image'>
+                        인사
+                    </span>
+                    <span class='menu-item'>
+                        <img src='../common/image/sitemap.png' class='menu-image'>
+                        조직
+                    </span>
+                    <span class='menu-item'>
+                        <img src='../common/image/vacation.png' class='menu-image'>
+                        휴가
+                    </span>
+                    <span class='menu-item'>
+                        <img src='../common/image/bank.png' class='menu-image'>
+                        급여
+                    </span>
+                    <span class='menu-item'>
+                        <img src='../common/image/calendar.png' class='menu-image'>
+                        스케쥴
+                    </span>
+
+                    <span>로그아웃</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 본문 -->
+        <section>
+
+            <!-- 타이틀(직원조회) -->
+            <div class="body">
+                <div class="title">
+                    <h3>사원조회</h3>
+                    <hr class="line">
+            </div>
+            
+            <!-- 서치 -->
+            <div class="header__search">
+                <!-- 카테고리 -->
+                <select class="header__searchSelect">
+                    <option value="All">전체</option>
+                    <option value="name">이름</option>
+                    <option value="number">사번</option>
+                    <option value="department">부서</option>
+                    <option value="position">직위</option>
+                </select>
+                <input type="text" class="header__searchInput" />
+                <button class="header__searchButton">
+                    <img src="../yuju/resource/image/search.png" alt="Search" class="custom-image-style" />
+                </button>
+            </div>
+
+            <!-- <table class="attendance-table">
+                <thead>
+                    <tr>
+                        <th>일자</th>
+                        <th>사원번호</th>
+                        <th>부서</th>
+                        <th>직급</th>
+                        <th>이름</th>
+                        <th>근무시간</th>
+                        <th>초과근무시간</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                </tbody>
+            </table> -->
+
+
+
+
+        </section>
+
+        <!-- 푸터 -->
+        <footer>
+            <div class="footer">
+                <pre>
+                (주)Bur HR (대표이사: 이재용)      |   주소
+                통신판매번호: 2023-서울종로-2222  | 사업자등록번호 : 234-35-3214
+                
+                고객 문의 : bubble@bubble.com
+                고객 센터 : 02-1343-8282
+                
+                개인(위치)정보 처리방침   |    이용약관    |  위치기반 서비스 이용약관
+                </pre>
+            </div>
+        </footer>
+    </body>
+
+    </html>
