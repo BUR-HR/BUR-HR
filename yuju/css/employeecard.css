@@ -42,7 +42,7 @@
     background-color: #f2f2f2;
     position: relative; /* 부모 요소에 상대적으로 위치 */
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 
@@ -109,7 +109,7 @@
     text-align: center;
     table-layout: fixed;
     font-size: 12px;
-    margin-top: 20px;
+    margin-top: -210px;
     margin-left: 350px;
     
 }
