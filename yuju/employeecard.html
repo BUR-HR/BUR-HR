@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../common/css/section.css'>
+    <link rel='stylesheet' href='../yuju/css/employeecard.css'>
+    <title>인사카드 등록</title>
+</head>
+
+    <!-- 헤더 -->
+    <header>
+        <div class="header">
+            <div class='menu'>
+                <img src='../common/image/logo.png' class='logo'>
+                <span class='menu-item'>
+                    <img src='../common/image/attendance.png' class='menu-image'>
+                    근태
+                </span>
+                <span class='menu-item'>
+                    <img src='../common/image/human.png' class='menu-image'>
+                    인사
+                </span>
+                <span class='menu-item'>
+                    <img src='../common/image/sitemap.png' class='menu-image'>
+                    조직
+                </span>
+                <span class='menu-item'>
+                    <img src='../common/image/vacation.png' class='menu-image'>
+                    휴가
+                </span>
+                <span class='menu-item'>
+                    <img src='../common/image/bank.png' class='menu-image'>
+                    급여
+                </span>
+                <span class='menu-item'>
+                    <img src='../common/image/calendar.png' class='menu-image'>
+                    스케쥴
+                </span>
+
+                <span>로그아웃</span>
+            </div>
+        </div>
+    </header>
+    
+    <body>
+
+    <!-- 본문 -->
+    <section>
+        <div class="body">
+            
+            <!-- 타이틀(인사카드 등록) -->
+            <div class="title">
+                <h3>인사카드 등록</h3>
+                <hr class="line">
+            </div>
+
+            <!-- 프로필 배경  -->
+            <div class="profile-body"> 
+
+                    <!-- 프로필 이미지 -->
+                    <div class="profile-image">
+                        <img id="profile-img" src="경로/이미지파일.jpg" alt="Profile Image">
+                        <div class="placeholder-text">이미지를 등록해주세요</div>
+                    </div>
+                    <!-- 등록 삭제 버튼 -->
+                    <div class="profile-buttons">
+                        <button class="register-button">등록</button>
+                        <button class="delete-button">삭제</button>
+                        <input type="file" id="file-input" style="display: none;" accept="image/*">
+                    </div>
+
+                    <!-- 정보 -->
+                    <table class="card-table">
+                            <tr>
+                                <th width="100">이름</th>
+                                <td width="100">이수혁</td>
+                            </tr>
+                            <tr>
+                                <th width="100">상태</th>
+                            </tr>
+                            <tr>
+                                <th width="100">사번</th>
+                            </tr>
+                            <tr>
+                                <th width="100">입사일</th>
+                            </tr>
+                            <tr>
+                                <th width="100">퇴사일</th>
+                            </tr>
+                    </table>
+
+            </div>
+
+
+            
+            
+            <!-- 스크립트 -->
+            <!-- 이미지가 로드되었는지 확인하고 그에 따라 문구를 표시하거나 숨김 -->
+            <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const img = document.getElementById('profile-img');
+                const placeholder = document.querySelector('.placeholder-text');
+            
+                img.addEventListener('load', function () {
+                    placeholder.style.display = 'none';
+                });
+            });    
+
+            <!-- 파일 업로드 -->
+            document.addEventListener('DOMContentLoaded', function () {
+            const img = document.getElementById('profile-img');
+            const placeholder = document.querySelector('.placeholder-text');
+            const fileInput = document.getElementById('file-input');
+            const registerButton = document.querySelector('.register-button');
+            const deleteButton = document.querySelector('.delete-button');
+
+            img.addEventListener('load', function () {
+                placeholder.style.display = 'none';
+            });
+
+            registerButton.addEventListener('click', function () {
+                // 등록 버튼을 눌렀을 때 파일 입력 요소를 클릭하도록 함
+                fileInput.click();
+            });
+
+            fileInput.addEventListener('change', function (event) {
+                const selectedFile = event.target.files[0];
+                if (selectedFile) {
+                    img.src = URL.createObjectURL(selectedFile);
+                    placeholder.style.display = 'none';
+                }
+            });
+
+            deleteButton.addEventListener('click', function () {
+                // 삭제 버튼을 눌렀을 때 이미지 삭제 및 기본 문구 표시
+                img.src = '';
+                placeholder.style.display = 'block';
+                fileInput.value = ''; // 입력된 파일 초기화
+            });
+        });
+            </script>         
+            
+        </div>
+    </section>
+
+    
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="footer">
+            <pre>
+            (주)Bur HR (대표이사: 이재용)      |   주소
+            통신판매번호: 2023-서울종로-2222  | 사업자등록번호 : 234-35-3214
+            
+            고객 문의 : bubble@bubble.com
+            고객 센터 : 02-1343-8282
+            
+            개인(위치)정보 처리방침   |    이용약관    |  위치기반 서비스 이용약관
+            </pre>
+        </div>
+    </footer>
+
+<body>
+    
+</body>
+</html>
