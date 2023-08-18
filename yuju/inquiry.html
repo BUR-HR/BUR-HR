@@ -50,11 +50,11 @@
         <section>
 
             <!-- 타이틀(직원조회) -->
-            <div class="body">
+        <div class="body">
                 <div class="title">
                     <h3>사원조회</h3>
                     <hr class="line">
-            </div>
+                </div>
             
             <!-- 서치 -->
             <div class="header__search">
@@ -66,41 +66,283 @@
                     <option value="department">부서</option>
                     <option value="position">직위</option>
                 </select>
+                <!-- 검색창과 검색버튼 -->
                 <input type="text" class="header__searchInput" />
-                <button class="header__searchButton">
+                <button class="header__searchButton" onclick="search()">
                     <img src="../yuju/resource/image/search.png" alt="Search" class="custom-image-style" />
                 </button>
             </div>
 
-            <!-- <table class="attendance-table">
+            <!-- 테이블 -->
+            <table class="employee-table">
                 <thead>
                     <tr>
-                        <th>일자</th>
-                        <th>사원번호</th>
+                        <th rowspan="2" width="100">이름</th>
+                        <th colspan="4" width="340">기본정보</th>
+                        <th colspan="2" width="200">인사정보</th>
+                        <th colspan="3">개인정보</th>
+                    </tr>
+                    <tr>
+                        <th>상태</th>
+                        <th>사번</th>
+                        <th>입사일</th>
+                        <th>퇴직일</th>
                         <th>부서</th>
-                        <th>직급</th>
-                        <th>이름</th>
-                        <th>근무시간</th>
-                        <th>초과근무시간</th>
+                        <th>직위</th>
+                        <th>이메일</th> 
+                        <th>성별</th>  
+                        <th>H.P</th>   
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>7</td>
+                        <td>이수혁</td>
+                        <td>재직</td>
+                        <td>16113</td>
+                        <td>2013.01.24</td>
+                        <td>-</td>
+                        <td>영업팀</td>
+                        <td>팀장</td>
+                        <td>Soohyuk@bubble.com</td>
+                        <td>남</td>
+                        <td>010-3464-7953</td>
                     </tr>
+                    <tr>
+                        <td>이지영</td>
+                        <td>재직</td>
+                        <td>19124</td>
+                        <td>2019.06.01</td>
+                        <td>-</td>
+                        <td>영업팀</td>
+                        <td>대리</td>
+                        <td>jiyeong@bubble.com</td>
+                        <td>여</td>
+                        <td>010-4603-5942</td>
+                    </tr>
+                    <tr>
+                        <td>김수지</td>
+                        <td>재직</td>
+                        <td>22134</td>
+                        <td>2022.03.03</td>
+                        <td>-</td>
+                        <td>영업팀</td>
+                        <td>사원</td>
+                        <td>suzy@bubble.com</td>
+                        <td>여</td>
+                        <td>010-5952-3960</td>
+                    </tr>
+                    <tr>
+                        <td>박선애</td>
+                        <td>재직</td>
+                        <td>15214</td>
+                        <td>2015.04.20</td>
+                        <td>-</td>
+                        <td>마케팅팀</td>
+                        <td>팀장</td>
+                        <td>sunae@bubble.com</td>
+                        <td>여</td>
+                        <td>010-7642-2350</td>
+                    </tr>
+                    <tr>
+                        <td>최현우</td>
+                        <td>휴직</td>
+                        <td>18223</td>
+                        <td>2018.09.04</td>
+                        <td>-</td>
+                        <td>마케팅팀</td>
+                        <td>대리</td>
+                        <td>hyunwoo@bubble.com</td>
+                        <td>남</td>
+                        <td>010-6033-4927</td>
+                    </tr>
+                    <tr>
+                        <td>정한나</td>
+                        <td>재직</td>
+                        <td>23234</td>
+                        <td>2023.03.02</td>
+                        <td>-</td>
+                        <td>마케팅팀</td>
+                        <td>사원</td>
+                        <td>hanna@bubble.com</td>
+                        <td>여</td>
+                        <td>010-2305-6954</td>
+                    </tr>
+                    <tr>
+                        <td>유성민</td>
+                        <td>재직</td>
+                        <td>17313</td>
+                        <td>2017.05.14</td>
+                        <td>-</td>
+                        <td>현장팀</td>
+                        <td>팀장</td>
+                        <td>seongmin@bubble.com</td>
+                        <td>남</td>
+                        <td>010-4267-7032</td>
+                    </tr>
+                    <tr>
+                        <td>임지환</td>
+                        <td>재직</td>
+                        <td>20323</td>
+                        <td>2020.10.13</td>
+                        <td>-</td>
+                        <td>현장팀</td>
+                        <td>대리</td>
+                        <td>jihwan@bubble.com</td>
+                        <td>남</td>
+                        <td>010-9429-4016</td>
+                    </tr>
+                    <tr>
+                        <td>서지원</td>
+                        <td>재직</td>
+                        <td>23334</td>
+                        <td>2023.03.25</td>
+                        <td>-</td>
+                        <td>현장팀</td>
+                        <td>사원</td>
+                        <td>jiwon@bubble.com</td>
+                        <td>여</td>
+                        <td>010-3455-4931</td>
+                    </tr>
+                    <tr>
+                        <td>조세라</td>
+                        <td>휴직</td>
+                        <td>17414</td>
+                        <td>2017.08.31</td>
+                        <td>-</td>
+                        <td>고객응대팀</td>
+                        <td>팀장</td>
+                        <td>sera@bubble.com</td>
+                        <td>여</td>
+                        <td>010-3295-6029</td>
+                    </tr>
+                    <tr>
+                        <td>우지효</td>
+                        <td>재직</td>
+                        <td>20423</td>
+                        <td>2020.01.20</td>
+                        <td>-</td>
+                        <td>고객응대팀</td>
+                        <td>대리</td>
+                        <td>jihyo@bubble.com</td>
+                        <td>남</td>
+                        <td>010-2705-8533</td>
+                    </tr>
+                    <tr>
+                        <td>홍예지</td>
+                        <td>재직</td>
+                        <td>21434</td>
+                        <td>2021.05.03</td>
+                        <td>-</td>
+                        <td>고객응대팀</td>
+                        <td>사원</td>
+                        <td>yeji@bubble.com</td>
+                        <td>여</td>
+                        <td>010-3720-3855</td>
+                    </tr> 
+                    <tr>
+                        <td>황재승</td>
+                        <td>재직</td>
+                        <td>16513</td>
+                        <td>2016.02.03</td>
+                        <td>-</td>
+                        <td>인사팀</td>
+                        <td>팀장</td>
+                        <td>jeaseung@bubble.com</td>
+                        <td>남</td>
+                        <td>010-9402-6023</td>
+                    </tr>
+                    <tr>
+                        <td>송유라</td>
+                        <td>재직</td>
+                        <td>20524</td>
+                        <td>2020.08.23</td>
+                        <td>-</td>
+                        <td>인사팀</td>
+                        <td>대리</td>
+                        <td>yura@bubble.com</td>
+                        <td>여</td>
+                        <td>010-7602-9621</td>
+                    </tr>
+                    <tr>
+                        <td>송유라</td>
+                        <td>재직</td>
+                        <td>20524</td>
+                        <td>2020.08.23</td>
+                        <td>-</td>
+                        <td>인사팀</td>
+                        <td>대리</td>
+                        <td>yura@bubble.com</td>
+                        <td>여</td>
+                        <td>010-7602-9621</td>
+                    </tr>
+                    <tr>
+                        <td>장현식</td>
+                        <td>재직</td>
+                        <td>21513</td>
+                        <td>2021.05.20</td>
+                        <td>-</td>
+                        <td>인사팀</td>
+                        <td>사원</td>
+                        <td>sick@bubble.com</td>
+                        <td>남</td>
+                        <td>010-2365-3963</td>
+                    </tr>
+                    <tr>
+                        <td>이혜윤</td>
+                        <td>재직</td>
+                        <td>17614</td>
+                        <td>2017.06.02</td>
+                        <td>-</td>
+                        <td>총무팀</td>
+                        <td>팀장</td>
+                        <td>yun@bubble.com</td>
+                        <td>여</td>
+                        <td>010-5642-5933</td>
+                    </tr>
+                    <tr>
+                        <td>오현주</td>
+                        <td>재직</td>
+                        <td>20624</td>
+                        <td>2020.06.25</td>
+                        <td>-</td>
+                        <td>총무팀</td>
+                        <td>대리</td>
+                        <td>hyunjoo@bubble.com</td>
+                        <td>여</td>
+                        <td>010-5695-3293</td>
+                    </tr>
+                    <tr>
+                        <td>김세훈</td>
+                        <td>재직</td>
+                        <td>22633</td>
+                        <td>2022.01.04</td>
+                        <td>-</td>
+                        <td>총무팀</td>
+                        <td>사원</td>
+                        <td>hoon@bubble.com</td>
+                        <td>남</td>
+                        <td>010-6542-5294</td>
+                    </tr> 
                 </tbody>
-            </table> -->
-
-
-
-
+            </table>
+            
+            
+        </div>
         </section>
+
+        <!-- 스크립트 코드 -->
+        <!-- 빈 문자열 검색시 alert창 -->
+        <script>
+            function search() {
+                var searchInput = document.querySelector(".header__searchInput").value;
+                if (searchInput.trim() === "") {
+                    alert("검색어를 입력해주세요.");
+                } else {
+                    // 실제 검색 로직을 여기에 추가
+                    alert("검색어: " + searchInput);
+                }
+            }
+        </script>
 
         <!-- 푸터 -->
         <footer>
