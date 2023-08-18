@@ -15,7 +15,6 @@
 
 }
 
-
 .menu-title {
     display: flex;
     align-items: center;
@@ -72,7 +71,24 @@
 }
 
 .dropmenu ul {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #F3F3F5;
     list-style-type: none;
+    gap: 10px;
+}
+
+
+.dropmenu li::before {
+    content: '￭';
+    margin-right: 5px;
+}
+
+.dropmenu li:hover {
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .menu-icon {

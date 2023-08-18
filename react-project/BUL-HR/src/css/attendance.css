@@ -63,6 +63,19 @@
     margin-top: 30px;
 }
 
+.attendance-btn {
+    width: 65px;
+    height: 30px;
+    background-color: #738A9D;
+    border: 1px solid #c1c1c1;
+    font-weight: bold;
+}
+
+.attendance-btn:hover {
+    background-color: #4B5B68;
+    color: white
+}
+
 .work-history {
     position: absolute;
     font-size: 18px;
@@ -75,28 +88,3 @@
     font-weight: 600;
 }
 
-.attendance-table {
-    margin-top: 40px;
-    background: #FFF;
-    width: 100%;
-    border: 1px solid #5B5B5B;
-    border-collapse: collapse;
-    text-align: center;
-    table-layout: fixed;
-    font-size: 12px;
-}
-
-.attendance-table th {
-    background: #F3F3F5;
-}
-
-.attendance-table th,
-.attendance-table td {
-    height: 36px;
-    border: 1px solid #D9D9D9;
-    padding: 0 4px;
-    box-sizing: border-box;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
